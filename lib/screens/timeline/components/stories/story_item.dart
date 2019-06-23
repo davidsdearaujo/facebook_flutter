@@ -1,20 +1,46 @@
 import 'package:flutter/material.dart';
 
 class StoryItem extends StatelessWidget {
+  final String name;
+  final String storyImageUrl;
+  final String perfilImageUrl;
+  final void Function() onTap;
+  final bool visualized;
+
+  const StoryItem({
+    Key key,
+    @required this.name,
+    this.storyImageUrl,
+    this.perfilImageUrl,
+    this.onTap,
+    this.visualized = false,
+  })  : assert(name != null),
+        super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    bool isOwner = perfilImageUrl == null;
+    Color circleColor =
+        visualized ? Colors.white : Theme.of(context).primaryColor;
+
     return Stack(
       children: <Widget>[
         Container(
           width: 120,
           decoration: BoxDecoration(
-            color: Colors.green,
-            borderRadius: BorderRadius.circular(10),
+            color: Colors.grey[200],
+            borderRadius: BorderRadius.circular(13),
             image: DecorationImage(
-              image: NetworkImage(
-                  "https://media.licdn.com/dms/image/C4E03AQEMs0OIB2pnXA/profile-displayphoto-shrink_800_800/0?e=1567036800&v=beta&t=9zjCCjnwkQse7-IVjx3yXHNo83lwd6igwYFjS_-_3XA"),
+              image: NetworkImage(storyImageUrl),
               fit: BoxFit.cover,
             ),
+          ),
+        ),
+        Container(
+          width: 120,
+          decoration: BoxDecoration(
+            color: Colors.black26,
+            borderRadius: BorderRadius.circular(13),
           ),
         ),
         Positioned(
@@ -26,18 +52,26 @@ class StoryItem extends StatelessWidget {
             padding: EdgeInsets.all(1),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.transparent,
-              border: Border.all(
-                color: Theme.of(context).primaryColor,
-                width: 2,
-              ),
+              color: isOwner ? Colors.white : Colors.transparent,
+              border: isOwner
+                  ? null
+                  : Border.all(
+                      color: circleColor,
+                      width: 2,
+                    ),
             ),
-            child: ClipOval(
-              child: Image.network(
-                "https://media.licdn.com/dms/image/C4E03AQEMs0OIB2pnXA/profile-displayphoto-shrink_800_800/0?e=1567036800&v=beta&t=9zjCCjnwkQse7-IVjx3yXHNo83lwd6igwYFjS_-_3XA",
-                fit: BoxFit.cover,
-              ),
-            ),
+            child: isOwner
+                ? Icon(
+                    Icons.add,
+                    size: 23,
+                    color: Theme.of(context).primaryColor,
+                  )
+                : ClipOval(
+                    child: Image.network(
+                      perfilImageUrl,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
           ),
         ),
         Positioned(
@@ -45,11 +79,24 @@ class StoryItem extends StatelessWidget {
           left: 10,
           right: 10,
           child: Text(
-            "Alvaro Vasconcelos",
+            name,
             style:
                 Theme.of(context).textTheme.body1.copyWith(color: Colors.white),
           ),
-        )
+        ),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(13),
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              radius: -20,
+              onTap: onTap,
+              highlightColor: Colors.black12,
+              splashFactory: InkRipple.splashFactory,
+              child: Container(width: 120),
+            ),
+          ),
+        ),
       ],
     );
   }

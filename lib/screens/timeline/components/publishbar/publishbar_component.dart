@@ -7,7 +7,11 @@ class PublishbarComponent extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: ListTile(
-        leading: CircleAvatar(backgroundImage: NetworkImage("https://media.licdn.com/dms/image/C5603AQEKYex09zfWlg/profile-displayphoto-shrink_100_100/0?e=1565827200&v=beta&t=Ta6g_Depl3poGqvIeNTHEGvGUpjNXSQ94WFJdXILLdA"),),
+        leading: CircleAvatar(
+          backgroundImage: NetworkImage(
+              "https://media.licdn.com/dms/image/C5603AQEKYex09zfWlg/profile-displayphoto-shrink_100_100/0?e=1565827200&v=beta&t=Ta6g_Depl3poGqvIeNTHEGvGUpjNXSQ94WFJdXILLdA"),
+          backgroundColor: Colors.grey[200],
+        ),
         title: Container(
           width: double.infinity,
           margin: EdgeInsets.symmetric(vertical: 10),
@@ -25,7 +29,10 @@ class PublishbarComponent extends StatelessWidget {
         trailing: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Icon(FontAwesomeIcons.images, color: Colors.black,),
+            Icon(
+              FontAwesomeIcons.images,
+              color: Colors.black,
+            ),
             SizedBox(height: 3),
             Text("Foto", style: TextStyle(fontSize: 10))
           ],

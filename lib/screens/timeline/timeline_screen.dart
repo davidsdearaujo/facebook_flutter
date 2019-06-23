@@ -17,6 +17,12 @@ class TimelineScreen extends StatelessWidget {
           case 1:
             return StoriesComponent();
             break;
+          default:
+            return Container(
+              width: 50,
+              height: 50,
+              color: Colors.green,
+            );
         }
       },
     );

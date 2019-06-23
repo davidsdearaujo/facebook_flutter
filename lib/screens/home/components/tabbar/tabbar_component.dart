@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'tab_tile.dart';
 
@@ -10,12 +9,12 @@ class TabbarComponent extends StatelessWidget {
       color: Colors.white,
       child: Row(
         children: <Widget>[
-          TabTile(asset: 'assets/painel.png'),
-          TabTile(asset: 'assets/pessoas.png'),
-          TabTile(asset: 'assets/grupos.png'),
-          TabTile(asset: 'assets/shop.png'),
-          TabTile(asset: 'assets/alerta.png', badge: 14),
-          TabTile(asset: 'assets/lista.png'),
+          TabTile(asset: 'assets/images/tabs/painel.png'),
+          TabTile(asset: 'assets/images/tabs/pessoas.png'),
+          TabTile(asset: 'assets/images/tabs/grupos.png'),
+          TabTile(asset: 'assets/images/tabs/shop.png'),
+          TabTile(asset: 'assets/images/tabs/alerta.png', badge: 14),
+          TabTile(asset: 'assets/images/tabs/lista.png'),
         ],
       ),
     );

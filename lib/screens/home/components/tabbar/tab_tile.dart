@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 
 import 'package:facebook/shared/widgets/badge/badge_widget.dart';
@@ -19,9 +18,12 @@ class TabTile extends StatelessWidget {
                   badge?.toString(),
                   style: TextStyle(fontSize: 8, color: Colors.white),
                 ),
-          child: InkWell(
-            onTap: () {},
-            child: Image.asset(asset),
+          child: Container(
+            height: 25,
+            child: InkWell(
+              onTap: () {},
+              child: Image.asset(asset),
+            ),
           ),
         ),
       ),
