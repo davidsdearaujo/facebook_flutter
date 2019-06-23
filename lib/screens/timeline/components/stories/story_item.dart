@@ -23,9 +23,20 @@ class StoryItem extends StatelessWidget {
           child: Container(
             width: 40,
             height: 40,
+            padding: EdgeInsets.all(1),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white,
+              color: Colors.transparent,
+              border: Border.all(
+                color: Theme.of(context).primaryColor,
+                width: 2,
+              ),
+            ),
+            child: ClipOval(
+              child: Image.network(
+                "https://media.licdn.com/dms/image/C4E03AQEMs0OIB2pnXA/profile-displayphoto-shrink_800_800/0?e=1567036800&v=beta&t=9zjCCjnwkQse7-IVjx3yXHNo83lwd6igwYFjS_-_3XA",
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
@@ -33,7 +44,11 @@ class StoryItem extends StatelessWidget {
           bottom: 5,
           left: 10,
           right: 10,
-          child: Text("Alvaro Vasconcelos", style: TextStyle(),),
+          child: Text(
+            "Alvaro Vasconcelos",
+            style:
+                Theme.of(context).textTheme.body1.copyWith(color: Colors.white),
+          ),
         )
       ],
     );

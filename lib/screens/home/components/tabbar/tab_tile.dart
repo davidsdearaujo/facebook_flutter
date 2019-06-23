@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:facebook/shared/widgets/badge/badge_widget.dart';
 
 class TabTile extends StatelessWidget {
-  final IconData icon;
+  final String asset;
   final int badge;
 
-  TabTile({Key key, this.icon, this.badge}) : super(key: key);
+  TabTile({Key key, this.asset, this.badge}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -21,7 +21,7 @@ class TabTile extends StatelessWidget {
                 ),
           child: InkWell(
             onTap: () {},
-            child: Icon(icon),
+            child: Image.asset(asset),
           ),
         ),
       ),

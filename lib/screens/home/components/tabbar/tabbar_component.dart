@@ -10,12 +10,12 @@ class TabbarComponent extends StatelessWidget {
       color: Colors.white,
       child: Row(
         children: <Widget>[
-          TabTile(icon: FontAwesomeIcons.newspaper),
-          TabTile(icon: FontAwesomeIcons.userFriends, badge: 3),
-          TabTile(icon: FontAwesomeIcons.tv),
-          TabTile(icon: FontAwesomeIcons.userCircle),
-          TabTile(icon: FontAwesomeIcons.bell, badge: 14),
-          TabTile(icon: FontAwesomeIcons.bars),
+          TabTile(asset: 'assets/painel.png'),
+          TabTile(asset: 'assets/pessoas.png'),
+          TabTile(asset: 'assets/grupos.png'),
+          TabTile(asset: 'assets/shop.png'),
+          TabTile(asset: 'assets/alerta.png', badge: 14),
+          TabTile(asset: 'assets/lista.png'),
         ],
       ),
     );

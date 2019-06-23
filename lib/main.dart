@@ -5,7 +5,6 @@ import 'dart:io' show Platform;
 
 import 'screens/home/home_screen.dart';
 
-
 void main() {
   _setTargetPlatformForDesktop();
   runApp(MyApp());
@@ -19,7 +18,7 @@ void _setTargetPlatformForDesktop() {
   if (targetPlatform != null) {
     debugDefaultTargetPlatformOverride = targetPlatform;
   }
-} 
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -31,7 +30,12 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFF4167B2),
         iconTheme: IconThemeData(size: 18),
         scaffoldBackgroundColor: Color(0xFFDDDCE1),
-        textTheme: TextTheme()
+        fontFamily: "Helvetica",
+        textTheme: TextTheme(
+          body1: TextStyle(
+            fontSize: 10,
+          ),
+        ),
       ),
       home: HomeScreen(),
     );
