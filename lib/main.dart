@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFF4167B2),
         iconTheme: IconThemeData(size: 18),
         scaffoldBackgroundColor: Color(0xFFDDDCE1),
+        textTheme: TextTheme()
       ),
       home: HomeScreen(),
     );
