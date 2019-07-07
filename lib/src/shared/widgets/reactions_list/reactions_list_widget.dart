@@ -1,4 +1,4 @@
-import 'package:facebook/shared/widgets/reaction/reaction_widget.dart';
+import 'package:facebook/src/shared/widgets/reaction/reaction_widget.dart';
 import 'package:flutter/material.dart';
 
 class ReactionsListWidget extends StatelessWidget {

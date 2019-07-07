@@ -1,7 +1,7 @@
-import 'package:facebook/screens/story/story_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../story/story_screen.dart';
 import 'story_item.dart';
 
 class StoriesComponent extends StatelessWidget {

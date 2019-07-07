@@ -1,6 +1,6 @@
+import 'package:facebook/src/shared/widgets/badge/badge_widget.dart';
 import 'package:flutter/material.dart';
 
-import 'package:facebook/shared/widgets/badge/badge_widget.dart';
 
 class TabTile extends StatelessWidget {
   final String asset;

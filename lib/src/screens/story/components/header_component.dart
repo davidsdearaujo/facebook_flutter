@@ -1,4 +1,4 @@
-import 'package:facebook/shared/widgets/header/header_widget.dart';
+import 'package:facebook/src/shared/widgets/header/header_widget.dart';
 import 'package:flutter/material.dart';
 
 class HeaderComponent extends StatelessWidget {

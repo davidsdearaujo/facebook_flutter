@@ -17,6 +17,9 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  rxdart: ^0.22.0
+  bloc_pattern: ^2.2.2+3
+  dio: ^2.1.10
   flutter:
     sdk: flutter
   font_awesome_flutter: ^8.4.0

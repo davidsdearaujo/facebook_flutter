@@ -1,4 +1,5 @@
-import 'package:facebook/shared/widgets/reactions_list/reactions_list_widget.dart';
+
+import 'package:facebook/src/shared/widgets/reactions_list/reactions_list_widget.dart';
 import 'package:flutter/material.dart';
 
 class FooterComponent extends StatelessWidget {
