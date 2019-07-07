@@ -1,16 +1,16 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
-import 'components/footer_component.dart';
-import 'components/header_component.dart';
-import 'components/time_component.dart';
+import 'footer/footer_component.dart';
+import 'header/header_component.dart';
+import 'time/time_component.dart';
 
-class StoryScreen extends StatefulWidget {
+class StoryPage extends StatefulWidget {
   @override
-  _StoryScreenState createState() => _StoryScreenState();
+  _StoryPageState createState() => _StoryPageState();
 }
 
-class _StoryScreenState extends State<StoryScreen> {
+class _StoryPageState extends State<StoryPage> {
   @override
   void initState() {
     super.initState();

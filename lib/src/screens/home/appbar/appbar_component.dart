@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../../shared/widgets/badge/badge_widget.dart';
+import '../../../shared/widgets/badge/badge_widget.dart';
 import '../tabbar/tabbar_component.dart';
 
 

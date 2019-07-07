@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'components/stories/stories_component.dart';
-import 'components/publishbar/publishbar_component.dart';
+import 'stories/stories_component.dart';
+import 'publishbar/publishbar_component.dart';
 
 class TimelineScreen extends StatelessWidget {
   @override

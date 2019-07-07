@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../timeline/timeline_screen.dart';
-import 'components/appbar/appbar_component.dart';
+import 'appbar/appbar_component.dart';
 
 
 class HomeScreen extends StatelessWidget {
