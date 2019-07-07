@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../story/story_page.dart';
+import '../../story/story_module.dart';
 import 'story_item.dart';
 
 class StoriesComponent extends StatelessWidget {
@@ -38,7 +38,7 @@ class StoriesComponent extends StatelessWidget {
                 Navigator.push(
                   context,
                   CupertinoPageRoute(
-                    builder: (context) => StoryPage(),
+                    builder: (context) => StoryModule(),
                     fullscreenDialog: true,
                   ),
                 );
